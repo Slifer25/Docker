@@ -15,13 +15,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    cur2 = connection.cursor()
-
     return f'Application /'
 
 @app.route('/teste/<int:x>')
 def teste(x):
-   cur3 = connection.cursor()
    r = x**2
    return jsonify (r)
 
